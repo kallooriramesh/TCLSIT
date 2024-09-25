@@ -1,0 +1,141 @@
+<template>
+    
+    <c-verify-customer onverify={handleVerifyCustomer}></c-verify-customer>
+    <iframe class="slds-hide" height="400px" width="100%" src="/apex/IpAddressPage"></iframe>
+    <template if:true={isErrorMessage}>
+        <div class="slds-grid slds-wrap slds-grid_align-center">
+            <div class="slds-col slds-size--4-of-6 slds-small-size--1-of-1 slds-medium-size--4-of-6 backgroundBox">
+                  <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small contentBox">
+                      <div class="slds-text-color_error slds-m-around_x-small" >{errorMessage}</div>                    
+                  </div>
+              </div>
+          </div>
+    </template>
+
+    <template if:true={isDetailsReceived}>
+
+        <template if:true={consentReceived}>
+            <c-pss-Thank-You-Page headermsg={headerMSG} subheadingmsg={subHeadingMSG}></c-pss-Thank-You-Page>
+           <!-- <lightning-layout class="slds-form__row form-row">
+                <lightning-layout-item class="slds-form__item slds-no-space slds-var-p-top_x-large slds-var-p-bottom_large" size="12" large-device-size="12" medium-device-size="6" small-device-size="12">
+                    <div class="slds-align_absolute-center">
+                        <lightning-icon icon-name="action:approval" alternative-text="Thank You" title="Thank You"></lightning-icon>
+                    </div>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-form__item slds-no-space slds-var-p-bottom_x-large" size="12" large-device-size="12" medium-device-size="6" small-device-size="12">
+                    <div class="slds-align_absolute-center form-text">
+                        Thank You!
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>-->
+        </template>
+        <template if:false={consentReceived}>
+            <div class="slds-grid slds-wrap slds-grid_align-center pageContent">
+                <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1">
+                    <div class="bgContainer">
+                    <div class={cardClass}>
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size--1-of-6 slds-small-size--1-of-1 slds-medium-size--1-of-6 slds-text-align_right">
+    
+                            </div>
+                            <div class="slds-col slds-size--4-of-6 slds-small-size--1-of-1 slds-medium-size--4-of-6 titleText slds-m-vertical_large slds-text-align_center adr-title">
+                                Address Confirmation 
+                            </div>
+                            <div class="slds-col slds-size--1-of-6 slds-small-size--1-of-1 slds-medium-size--1-of-6 slds-text-align_right">
+                                <template if:true={kycPhoto}>
+                                <img src={kycPhoto} height="100" width="100">
+                                </template>
+                            </div>
+                        </div>
+                      <template if:true={isDetailsReceived}>
+                        <div class="slds-grid slds-wrap slds-grid_align-center">
+                            <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1">
+                                <div class="contentBox slds-grid slds-wrap slds-grid_align-center">
+                                    <div class="slds-col slds-size--6-of-6 slds-small-size--1-of-1 slds-medium-size--6-of-6 slds-m-vertical_medium">
+                                   
+                                        
+                                            <div class="addressPanel slds-p-vertical_large slds-p-horizontal_large">
+                                                <div class="adr-cntr">
+                                                    <span class="demogTitle">Address</span>
+                                                    <span class={adrClass}>{intChecklist.Address_Line_1__c} {intChecklist.Address_Line_2__c}</span>
+                                                </div>
+                                                <div class="sub-address-container">
+                                                    <div>
+                                                        <span class="demogTitle">Pincode</span>
+                                                        <span class={adrClass}>{intChecklist.Pincode__c}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="demogTitle">City</span>
+                                                        <span class={adrClass}>{intChecklist.City__c}</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="demogTitle">State</span>
+                                                        <span class={adrClass}>{intChecklist.State__c}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <div class="slds-m-bottom_medium slds-p-around_medium slds-text-align_left">
+                                            <!-- <lightning-radio-group name="radioGroup"
+                                                label=""
+                                                options={options}
+                                                value={selectedOption}
+                                                required
+                                                type="radio"
+                                                onchange={handleSelectedOption}
+                                                class="radioButton">
+                                            </lightning-radio-group> -->
+    
+                                            
+                                                <div class="slds-form-element">
+                                                  
+                                                  <div style="margin-top: 24px;">
+                                                    <div>
+                                                      <label class={option1Container}>
+                                                        <input type="radio" name="options" value="SAME" checked={isCheckedOption1} onchange={handleSelectedOption} />
+                                                        <span class="slds-radio_faux"></span>
+                                                        <span class={cnfrmCls}>I confirm that the address shown above is my current residential address</span>
+                                                      </label>
+                                                      <template if:false={isOVDVerification}>
+                                                        <label class={option2Container}>
+                                                            <input type="radio" name="options" value="DIFF" checked={isCheckedOption2} onchange={handleSelectedOption} />
+                                                            <span class="slds-radio_faux"></span>
+                                                            <span class={cnfrmCls}>Please take my current address as per application form</span>
+                                                        </label>
+                                                    </template>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                        </div>
+                                        <div class="slds-m-bottom_large slds-text-align_center">
+                                            <lightning-input 
+                                                class={chckbxCls}
+                                                type="checkbox" label="I hereby declare that all the information voluntarily furnished by me is true, correct and complete." 
+                                                name="input1" 
+                                                onchange={handleConfirmChange}
+                                                value={isConsent}></lightning-input>
+                                        </div>
+                                        <div class="action slds-text-align_center">
+                                            <!-- <button class="actionButton btn-container" onclick={continueToLiveliness} disabled={disableButton}>
+                                                <span class="slds-m-right_small">Continue</span>
+                                                <lightning-icon icon-name="utility:chevronright" size="small" variant="inverse"></lightning-icon>
+                                            </button> -->
+                                            <lightning-button 
+                                            variant="brand"
+                                            label="CONTINUE"
+                                            title="Continue"
+                                            onclick={continueToLiveliness}
+                                            class="slds-m-left_small btn-container"
+                                            disabled={disableButton}></lightning-button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                    </div>
+                    </div>
+                </div>
+            </div> 
+        </template>
+    </template>
+</template>

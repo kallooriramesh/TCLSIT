@@ -1,0 +1,173 @@
+.titleText{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px ;
+  }
+
+  .backgroundBox{
+    background: linear-gradient(270deg, #FFFD00 14.56%, #007DFF 75.79%);
+    border-radius: 32px;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+  }
+
+  .container-dark {
+    background: linear-gradient(#23242e, #23242e) !important;
+ }
+
+ .input-check-cls {
+  color:#666666;
+  -webkit-text-fill-color:#666666;
+}
+
+.clr-white{
+  color:#fff;
+  -webkit-text-fill-color: #fff;
+}
+
+  .title{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px ;
+  }
+  .progressContainer {
+    width: auto;
+  }
+  .progressbar li img{
+    width: 15px;
+  }
+
+  .progressbar {
+    counter-reset: step;
+  }
+  .progressbar li {
+    list-style-type: none;
+    float: left;
+    font-size: 12px;
+    position: sticky;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    width:33%;
+  }
+  .progressbar li .icon {
+    width: 30px;
+    height: 30px;
+    content: '';
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: #7d7d7d;
+  }
+  .progressbar li.active .icon {
+    background-color: #55b776;
+  }
+  .progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    display:block;
+    left: -50%;
+    z-index: -1;
+  }
+  .progressbar li:first-child:after {
+    content: none;
+  }
+  .progressbar li.active {
+    color: green;
+  }
+  .progressbar li.active:before {
+    border-color: #55b776;
+  }
+  .progressbar li.active + li:after {
+    background-color: #55b776;
+  }
+
+  .kyc-container{
+    background: white;
+    border: none;
+    border-radius: 32px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+    margin-left: 0px;
+  }
+
+  p.aadhaar-label {
+    color: #1961ac;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+
+  .blue-contianer{
+    background: #dbecfe;
+    border-radius: 24px;
+    padding: 32px;
+    letter-spacing: .5px;
+    color: rgba(26, 26, 26, 0.56);
+    font-weight: 400;
+
+  }
+
+  p.step-container {
+    font-size: 20px;
+}
+
+
+.custom-list {
+    list-style: none; /* Remove default bullets */
+    padding-left: 16px; /* Adjust padding as needed */
+}
+
+.custom-list li {
+    position: relative;
+    padding-left: 25px; /* Space for the custom bullet */
+}
+
+.custom-list li::before {
+    content: ''; /* Empty content for the bullet */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%); /* Center the bullet vertically */
+    width: 10px; /* Size of the circle */
+    height: 10px; /* Size of the circle */
+    background: #1961ac; /* Circle color */
+    border-radius: 50%; /* Makes the bullet a circle */
+}
+
+.btn-container{
+
+--slds-c-button-brand-color-background: #1961ac;
+--slds-c-button-radius-border:12px;
+--slds-c-button-brand-color-background-hover:#1961ac;
+--slds-c-button-brand-color-border:#1961ac;
+--slds-c-button-sizing-border:10px
+
+
+}
+
+button.active-class {
+  padding: 12px 24px;
+  background: #1961ac;
+  border: none;
+  border-radius: 12px;
+  color: white;
+}
+
+button.inactive-class{
+  padding: 12px 24px;
+  background: #1961ac;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  pointer-events: none;
+  opacity: .5;
+}

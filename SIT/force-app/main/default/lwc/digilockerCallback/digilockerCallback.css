@@ -1,0 +1,243 @@
+.pageContent{
+  min-height: 100vh;
+}
+.titleText {
+    /* border-bottom: 2px solid #DEDC00; */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 20px;
+  }
+  
+  .progressContainer {
+    width: auto;
+  }
+  
+  .progressbar li img {
+    width: 15px;
+  }
+  
+  .progressbar {
+    counter-reset: step;
+  }
+  
+  .progressbar li {
+    list-style-type: none;
+    float: left;
+    font-size: 12px;
+    position: sticky;
+    text-align: center;
+    text-transform: uppercase;
+    color: #7d7d7d;
+    width: 33%;
+  }
+  
+  .progressbar li .icon {
+    width: 30px;
+    height: 30px;
+    content: '';
+    line-height: 25px;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: #7d7d7d;
+  }
+  
+  .progressbar li.active .icon {
+    background-color: #55b776;
+  }
+  
+  .progressbar li:after {
+    width: 100%;
+    height: 2px;
+    content: '';
+    position: absolute;
+    background-color: #7d7d7d;
+    top: 15px;
+    display: block;
+    left: -50%;
+    z-index: -1;
+  }
+  
+  .progressbar li:first-child:after {
+    content: none;
+  }
+  
+  .progressbar li.active {
+    color: green;
+  }
+  
+  .progressbar li.active:before {
+    border-color: #55b776;
+  }
+  
+  .progressbar li.active+li:after {
+    background-color: #55b776;
+  }
+  
+  .dark-radio{
+    background-color: #66aeee !important;
+  }
+  
+  .kyc-container {
+    background: white;
+    border: none;
+    border-radius: 24px;
+    padding: 24px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 2px;
+  }
+
+  .bgContainer{
+    background: linear-gradient(270deg, #FFFD00 14.56%, #007DFF 75.79%);
+    border-radius: 32px;
+    padding-bottom: 1px;
+    margin-bottom: 20px;
+  }
+  
+  .container-dark {
+    background: linear-gradient(#23242e, #23242e) !important;
+  }
+  
+  .clr-white{
+    color:#fff;
+    -webkit-text-fill-color: #fff;
+  }
+  
+  .addressPanel.slds-m-vertical_small {
+    border-radius: 23px;
+    border: 1px solid #7d7d7d20;
+  }
+  
+  .addressPanel.slds-p-vertical_large.slds-p-horizontal_large {
+    border-radius: 24px;
+    border: 1px solid #7d7d7d20;
+  }
+  
+  .sub-address-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  
+  .adr-cntr {
+    display: flex;
+  }
+  
+  .demogTitle {
+    padding-right: 6px;
+    color: #71abe6;
+    font-size: 16px;
+  }
+  
+  .demogValue {
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .adr-title {
+    font-weight: 400;
+    font-size: 20px;
+    color: #8b8b8b
+  }
+  
+  
+  
+  .info-label {
+    font-size: 14px;
+    color: #1d1d1d;
+    margin-left: 10px;
+  }
+  
+  
+  .radio-container {
+    background-color: #ebf4fc;
+    border-radius: 10px;
+  }
+  
+  
+  .default-container {
+    padding: 8px 10px;
+    width: 100%;
+  }
+  
+  button.actionButton {
+    border: 0px;
+    background: #1961ac;
+    padding: 8px 16px;
+    /* border: 1px solid red; */
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+  }
+  
+  
+  .form-item-custom {
+    position: relative;
+    margin-bottom: 16px;
+    border: 0px;
+  }
+  
+  .form-item-custom input {
+    display: block;
+    border-radius: 8px;
+    border: 0px;
+    border-bottom: 1px solid;
+    border-radius: 10px;
+    background: #FFF;
+    display: flex;
+    padding: 14px 12px 14px 16px;
+    align-items: center;
+    gap: 14px;
+    color: var(--light-neutral-900-text, #111827);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    align-self: stretch;
+    width: 100%;
+    height: 48px;
+    border-bottom-width: 0.91px;
+    border-style: solid;
+    border-image-source: linear-gradient(91.95deg, #DFDC01 1.56%, #007DFF 98.76%);
+    border-image-slice: 1; /* This ensures the gradient covers the whole border */
+    border-radius: 10px;
+  }
+  
+  .form-item-custom label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 13px;
+    left: 10px;
+    font-size: 16px;
+    background: #fff;
+    padding: 0 10px;
+    color: #95A5BF;
+    transition: all .3s ease;
+  }
+  
+  .form-item-custom input:focus+label,
+  .form-item-custom input:valid+label {
+    top: -5px;
+    color: #3A8ADD;
+    border: 0px;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    /* 166.667% */
+  }
+  
+  textarea:focus,
+  input:focus {
+    outline: none;
+  }

@@ -1,0 +1,587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CIBIL - Individual</fullName>
+                <default>false</default>
+                <label>CIBIL - Individual</label>
+            </value>
+            <value>
+                <fullName>Send SMS OTP</fullName>
+                <default>false</default>
+                <label>Send SMS OTP</label>
+            </value>
+            <value>
+                <fullName>Verify SMS OTP</fullName>
+                <default>false</default>
+                <label>Verify SMS OTP</label>
+            </value>
+            <value>
+                <fullName>CIBIL - Corporate</fullName>
+                <default>false</default>
+                <label>CIBIL - Corporate</label>
+            </value>
+            <value>
+                <fullName>MDM - Search</fullName>
+                <default>false</default>
+                <label>MDM - Search</label>
+            </value>
+            <value>
+                <fullName>MDM - Fetch Details</fullName>
+                <default>false</default>
+                <label>MDM - Fetch Details</label>
+            </value>
+            <value>
+                <fullName>Verify CIBIL Corporate</fullName>
+                <default>false</default>
+                <label>Verify CIBIL Corporate</label>
+            </value>
+            <value>
+                <fullName>CKYC - Search</fullName>
+                <default>false</default>
+                <label>CKYC - Search</label>
+            </value>
+            <value>
+                <fullName>CKYC - Fetch Details</fullName>
+                <default>false</default>
+                <label>CKYC - Fetch Details</label>
+            </value>
+            <value>
+                <fullName>PAPQ - Get Token</fullName>
+                <default>false</default>
+                <label>PAPQ - Get Token</label>
+            </value>
+            <value>
+                <fullName>PAPQ - Get Offers</fullName>
+                <default>false</default>
+                <label>PAPQ - Get Offers</label>
+            </value>
+            <value>
+                <fullName>CKYC - Aadhar</fullName>
+                <default>false</default>
+                <label>CKYC - Aadhar</label>
+            </value>
+            <value>
+                <fullName>Aadhar - Value</fullName>
+                <default>false</default>
+                <label>Aadhar - Value</label>
+            </value>
+            <value>
+                <fullName>AMLOCK</fullName>
+                <default>false</default>
+                <label>AMLOCK</label>
+            </value>
+            <value>
+                <fullName>RCU Karza</fullName>
+                <default>false</default>
+                <label>RCU Karza</label>
+            </value>
+            <value>
+                <fullName>OMIC</fullName>
+                <default>false</default>
+                <label>OMIC</label>
+            </value>
+            <value>
+                <fullName>ESIGN_URL</fullName>
+                <default>false</default>
+                <label>ESIGN_URL</label>
+            </value>
+            <value>
+                <fullName>FICO_EMPLOYMENT</fullName>
+                <default>false</default>
+                <label>FICO_EMPLOYMENT</label>
+            </value>
+            <value>
+                <fullName>Yes Insta - FI Waiver</fullName>
+                <default>false</default>
+                <label>Yes Insta - FI Waiver</label>
+            </value>
+            <value>
+                <fullName>RCU Karza FICO</fullName>
+                <default>false</default>
+                <label>RCU Karza FICO</label>
+            </value>
+            <value>
+                <fullName>Esign</fullName>
+                <default>false</default>
+                <label>Esign</label>
+            </value>
+            <value>
+                <fullName>Stamping</fullName>
+                <default>false</default>
+                <label>Stamping</label>
+            </value>
+            <value>
+                <fullName>FICO_CPA_D1</fullName>
+                <default>false</default>
+                <label>FICO_CPA_D1</label>
+            </value>
+            <value>
+                <fullName>FICO_HUNTER</fullName>
+                <default>false</default>
+                <label>FICO_HUNTER</label>
+            </value>
+            <value>
+                <fullName>FICO_RCU</fullName>
+                <default>false</default>
+                <label>FICO_RCU</label>
+            </value>
+            <value>
+                <fullName>FICO_Eligibility_ROI</fullName>
+                <default>false</default>
+                <label>FICO_Eligibility_ROI</label>
+            </value>
+            <value>
+                <fullName>FICO_CPA_D2</fullName>
+                <default>false</default>
+                <label>FICO_CPA_D2</label>
+            </value>
+            <value>
+                <fullName>Finnone Dedupe</fullName>
+                <default>false</default>
+                <label>Finnone Dedupe</label>
+            </value>
+            <value>
+                <fullName>PAN Validation</fullName>
+                <default>false</default>
+                <label>PAN Validation</label>
+            </value>
+            <value>
+                <fullName>Send SMS</fullName>
+                <default>false</default>
+                <label>Send SMS</label>
+            </value>
+            <value>
+                <fullName>Finnone - Loan Onboarding</fullName>
+                <default>false</default>
+                <label>Finnone - Loan Onboarding</label>
+            </value>
+            <value>
+                <fullName>Finnone - Track Status</fullName>
+                <default>false</default>
+                <label>Finnone - Track Status</label>
+            </value>
+            <value>
+                <fullName>Verify CIBIL Individual</fullName>
+                <default>false</default>
+                <label>Verify CIBIL Individual</label>
+            </value>
+            <value>
+                <fullName>SmartPay - Initiate Payment</fullName>
+                <default>false</default>
+                <label>SmartPay - Initiate Payment</label>
+            </value>
+            <value>
+                <fullName>CIBIL - Individual Home Loan</fullName>
+                <default>false</default>
+                <label>CIBIL - Individual Home Loan</label>
+            </value>
+            <value>
+                <fullName>Digilocker OVD</fullName>
+                <default>false</default>
+                <label>Digilocker OVD</label>
+            </value>
+            <value>
+                <fullName>Verify CIBIL Individual Home Loan</fullName>
+                <default>false</default>
+                <label>Verify CIBIL Individual Home Loan</label>
+            </value>
+            <value>
+                <fullName>Experian</fullName>
+                <default>false</default>
+                <label>Experian</label>
+            </value>
+            <value>
+                <fullName>EKYC - Send OTP</fullName>
+                <default>false</default>
+                <label>EKYC - Send OTP</label>
+            </value>
+            <value>
+                <fullName>EKYC - Fetch Data</fullName>
+                <default>false</default>
+                <label>EKYC - Fetch Data</label>
+            </value>
+            <value>
+                <fullName>Karix - WhatsApp</fullName>
+                <default>false</default>
+                <label>Karix - WhatsApp</label>
+            </value>
+            <value>
+                <fullName>Fire Protect Insurance</fullName>
+                <default>false</default>
+                <label>Fire Protect Insurance</label>
+            </value>
+            <value>
+                <fullName>FinnOne - Submit Documents</fullName>
+                <default>false</default>
+                <label>FinnOne - Submit Documents</label>
+            </value>
+            <value>
+                <fullName>Reliance Maxlife Insurance</fullName>
+                <default>false</default>
+                <label>Reliance Maxlife Insurance</label>
+            </value>
+            <value>
+                <fullName>JocataOTPEmail</fullName>
+                <default>false</default>
+                <label>JocataOTPEmail</label>
+            </value>
+            <value>
+                <fullName>Webtop Creation API</fullName>
+                <default>false</default>
+                <label>Webtop Creation API</label>
+            </value>
+            <value>
+                <fullName>Create Webtop Folder API</fullName>
+                <default>false</default>
+                <label>Create Webtop Folder API</label>
+            </value>
+            <value>
+                <fullName>Send Mobile T &amp; C</fullName>
+                <default>false</default>
+                <label>Send Mobile T &amp; C</label>
+            </value>
+            <value>
+                <fullName>Upload Document To DMS</fullName>
+                <default>false</default>
+                <label>Upload Document To DMS</label>
+            </value>
+            <value>
+                <fullName>CKYC - Document Download</fullName>
+                <default>false</default>
+                <label>CKYC - Document Download</label>
+            </value>
+            <value>
+                <fullName>Liveliness Check</fullName>
+                <default>false</default>
+                <label>Liveliness Check</label>
+            </value>
+            <value>
+                <fullName>Digilocker</fullName>
+                <default>false</default>
+                <label>Digilocker</label>
+            </value>
+            <value>
+                <fullName>CKYC - Validate</fullName>
+                <default>false</default>
+                <label>CKYC - Validate</label>
+            </value>
+            <value>
+                <fullName>Shorten URL</fullName>
+                <default>false</default>
+                <label>Shorten URL</label>
+            </value>
+            <value>
+                <fullName>Send Email</fullName>
+                <default>false</default>
+                <label>Send Email</label>
+            </value>
+            <value>
+                <fullName>Submit Tata Cards Lead to SBI</fullName>
+                <default>false</default>
+                <label>Submit Tata Cards Lead to SBI</label>
+            </value>
+            <value>
+                <fullName>SBI Track Partner Application</fullName>
+                <default>false</default>
+                <label>SBI Track Partner Application</label>
+            </value>
+            <value>
+                <fullName>OKYC</fullName>
+                <default>false</default>
+                <label>OKYC</label>
+            </value>
+            <value>
+                <fullName>OKYC - Init</fullName>
+                <default>false</default>
+                <label>OKYC - Init</label>
+            </value>
+            <value>
+                <fullName>ScoreCard</fullName>
+                <default>false</default>
+                <label>ScoreCard</label>
+            </value>
+            <value>
+                <fullName>PerfiosGenerateStmtId</fullName>
+                <default>false</default>
+                <label>PerfiosGenerateStmtId</label>
+            </value>
+            <value>
+                <fullName>PerfiosFetchDetails</fullName>
+                <default>false</default>
+                <label>PerfiosFetchDetails</label>
+            </value>
+            <value>
+                <fullName>PerfiosGetBankMaster</fullName>
+                <default>false</default>
+                <label>PerfiosGetBankMaster</label>
+            </value>
+            <value>
+                <fullName>Pan Profile</fullName>
+                <default>false</default>
+                <label>Pan Profile</label>
+            </value>
+            <value>
+                <fullName>Employement Verification</fullName>
+                <default>false</default>
+                <label>Employement Verification</label>
+            </value>
+            <value>
+                <fullName>NACH - Check Open Mandate</fullName>
+                <default>false</default>
+                <label>NACH - Check Open Mandate</label>
+            </value>
+            <value>
+                <fullName>Penny Drop - Disbursement</fullName>
+                <default>false</default>
+                <label>Penny Drop - Disbursement</label>
+            </value>
+            <value>
+                <fullName>Balance Transfer Loan Details</fullName>
+                <default>false</default>
+                <label>Balance Transfer Loan Details</label>
+            </value>
+            <value>
+                <fullName>SOA - PL</fullName>
+                <default>false</default>
+                <label>SOA - PL</label>
+            </value>
+            <value>
+                <fullName>SOA - OD</fullName>
+                <default>false</default>
+                <label>SOA - OD</label>
+            </value>
+            <value>
+                <fullName>Name Match</fullName>
+                <default>false</default>
+                <label>Name Match</label>
+            </value>
+            <value>
+                <fullName>Block Mandate</fullName>
+                <default>false</default>
+                <label>Block Mandate</label>
+            </value>
+            <value>
+                <fullName>RCUStatusUpdate</fullName>
+                <default>false</default>
+                <label>RCUStatusUpdate</label>
+            </value>
+            <value>
+                <fullName>InitiateRCU</fullName>
+                <default>false</default>
+                <label>InitiateRCU</label>
+            </value>
+            <value>
+                <fullName>Save Mandate</fullName>
+                <default>false</default>
+                <label>Save Mandate</label>
+            </value>
+            <value>
+                <fullName>Enquiry API</fullName>
+                <default>false</default>
+                <label>Enquiry API</label>
+            </value>
+            <value>
+                <fullName>ReInitiateRCU</fullName>
+                <default>false</default>
+                <label>ReInitiateRCU</label>
+            </value>
+            <value>
+                <fullName>VKYC - Send Link</fullName>
+                <default>false</default>
+                <label>VKYC - Send Link</label>
+            </value>
+            <value>
+                <fullName>VKYC - Get Status</fullName>
+                <default>false</default>
+                <label>VKYC - Get Status</label>
+            </value>
+            <value>
+                <fullName>VKYC Generate Token</fullName>
+                <default>false</default>
+                <label>VKYC Generate Token</label>
+            </value>
+            <value>
+                <fullName>VPD Generate Token</fullName>
+                <default>false</default>
+                <label>VPD Generate Token</label>
+            </value>
+            <value>
+                <fullName>VPD - Get Status</fullName>
+                <default>false</default>
+                <label>VPD - Get Status</label>
+            </value>
+            <value>
+                <fullName>VPD - Send Link</fullName>
+                <default>false</default>
+                <label>VPD - Send Link</label>
+            </value>
+            <value>
+                <fullName>Posidex/Hunter/Bureau/CV</fullName>
+                <default>false</default>
+                <label>Posidex/Hunter/Bureau/CV</label>
+            </value>
+            <value>
+                <fullName>PAPL BRE Call</fullName>
+                <default>false</default>
+                <label>PAPL BRE Call</label>
+            </value>
+            <value>
+                <fullName>PAONFLY/LTDL BRE Call</fullName>
+                <default>false</default>
+                <label>PAONFLY/LTDL BRE Call</label>
+            </value>
+            <value>
+                <fullName>Normal Income Program</fullName>
+                <default>false</default>
+                <label>Normal Income Program</label>
+            </value>
+            <value>
+                <fullName>Posidex Decision</fullName>
+                <default>false</default>
+                <label>Posidex Decision</label>
+            </value>
+            <value>
+                <fullName>Verify Mandate</fullName>
+                <default>false</default>
+                <label>Verify Mandate</label>
+            </value>
+            <value>
+                <fullName>Business Date</fullName>
+                <default>false</default>
+                <label>Business Date</label>
+            </value>
+            <value>
+                <fullName>Additional CIBIL</fullName>
+                <default>false</default>
+                <label>Additional CIBIL</label>
+            </value>
+            <value>
+                <fullName>Penny Drop - Repayment</fullName>
+                <default>false</default>
+                <label>Penny Drop - Repayment</label>
+            </value>
+            <value>
+                <fullName>PSSPerfiosGenerateStmt</fullName>
+                <default>false</default>
+                <label>PSSPerfiosGenerateStmt</label>
+            </value>
+            <value>
+                <fullName>PSSPerfiosFetchDetails</fullName>
+                <default>false</default>
+                <label>PSSPerfiosFetchDetails</label>
+            </value>
+            <value>
+                <fullName>Get Overdue Details</fullName>
+                <default>false</default>
+                <label>Get Overdue Details</label>
+            </value>
+            <value>
+                <fullName>Voice Over OTP</fullName>
+                <default>false</default>
+                <label>Voice Over OTP</label>
+            </value>
+            <value>
+                <fullName>Create Customer FinnOne</fullName>
+                <default>false</default>
+                <label>Create Customer FinnOne</label>
+            </value>
+            <value>
+                <fullName>Create FinnOne Loan</fullName>
+                <default>false</default>
+                <label>Create FinnOne Loan</label>
+            </value>
+            <value>
+                <fullName>SAP Disbursal</fullName>
+                <default>false</default>
+                <label>SAP Disbursal</label>
+            </value>
+            <value>
+                <fullName>SAP Vendor Creation</fullName>
+                <default>false</default>
+                <label>SAP Vendor Creation</label>
+            </value>
+            <value>
+                <fullName>SAP Limit Setting</fullName>
+                <default>false</default>
+                <label>SAP Limit Setting</label>
+            </value>
+            <value>
+                <fullName>SAP Fees &amp; Charges</fullName>
+                <default>false</default>
+                <label>SAP Fees &amp; Charges</label>
+            </value>
+            <value>
+                <fullName>Repayment-Schedule</fullName>
+                <default>false</default>
+                <label>Repayment-Schedule</label>
+            </value>
+            <value>
+                <fullName>SAP Fees &amp; Charges - Stamp Duty</fullName>
+                <default>false</default>
+                <label>SAP Fees &amp; Charges - Stamp Duty</label>
+            </value>
+            <value>
+                <fullName>SAP Fees &amp; Charges - Other Charges</fullName>
+                <default>false</default>
+                <label>SAP Fees &amp; Charges - Other Charges</label>
+            </value>
+            <value>
+                <fullName>SAP Fees &amp; Charges - Processing Fees</fullName>
+                <default>false</default>
+                <label>SAP Fees &amp; Charges - Processing Fees</label>
+            </value>
+            <value>
+                <fullName>Applicant Account Validation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Applicant Account Validation</label>
+            </value>
+            <value>
+                <fullName>EmailValidation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>EmailValidation</label>
+            </value>
+            <value>
+                <fullName>Estamp</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Estamp</label>
+            </value>
+            <value>
+                <fullName>Opportunity_findAllByBatchId</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Opportunity_findAllByBatchId</label>
+            </value>
+            <value>
+                <fullName>Posidex Decision Test</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Posidex Decision Test</label>
+            </value>
+            <value>
+                <fullName>SAP UTR</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SAP UTR</label>
+            </value>
+            <value>
+                <fullName>createFolder</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>createFolder</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

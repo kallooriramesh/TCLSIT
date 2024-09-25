@@ -1,0 +1,126 @@
+<template>
+
+  <c-verify-customer onverify={handleVerifyCustomer}></c-verify-customer>  
+  <!-- <div class="slds-grid slds-wrap slds-grid_align-center">
+        <img src={tataCapLogo} width="150px"/>
+    </div> -->
+    <template if:true={isErrorMessage}>
+        <div class="slds-grid slds-wrap slds-grid_align-center backgroundBox">
+            <div class="slds-col slds-size--5-of-6 slds-small-size--1-of-1 slds-medium-size--5-of-6">
+                  <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                      <div class="slds-text-color_error slds-m-around_x-small" >{errorMessage}</div>                    
+                  </div>
+              </div>
+          </div>
+    </template>
+    <template if:false={isErrorMessage}>
+        <!--    <div class="slds-grid slds-wrap slds-grid_align-center">
+            <div class="slds-col slds-size--2-of-3 slds-small-size--1-of-1 slds-medium-size--2-of-3">
+              <div class="progressContainer">
+                <ul class="progressbar">
+                      <li class="active">
+                        <div class="icon">
+                            <lightning-icon icon-name="utility:user" alternative-text="Profile" title="Profile" size="x-small" variant="inverse"></lightning-icon>
+                        </div>
+                        <div>Profile</div>
+                      </li>
+                      <li class="">
+                        <div class="icon">
+                            <lightning-icon icon-name="utility:check" alternative-text="Approval" title="Approval" size="x-small" variant="inverse"></lightning-icon>
+                        </div>
+                        <div>Approval</div>
+                      </li>
+                      <li class="">
+                        <div class="icon">
+                          <lightning-icon icon-name="utility:approval" alternative-text="Disbursal" title="Disbursal" size="x-small" variant="inverse"></lightning-icon>
+                        </div>
+                        <div>Disbursal</div>
+                      </li>
+                </ul>
+              </div>
+            </div>
+        </div> -->
+        <div class="slds-grid slds-wrap slds-grid_align-center ">
+            <div class="slds-col slds-size--1-of-1 slds-small-size--1-of-1 slds-medium-size--1-of-1 ">
+              <div class="backgroundBox">
+                <div class={cardClass}>
+                  <div class="titleText">
+                    <img src={aadhaarLogo} width="150px" class="slds-m-vertical_medium"/>
+                    <p class="aadhaar-label">Aadhaar consent</p>
+                  </div>  
+                  <template if:false={isInitOkycComplete}>
+                    <div class="slds-grid slds-wrap slds-grid_align-center slds-grid_vertical-align-center">
+                      <!-- <div class="slds-col slds-size--1-of-6 slds-small-size--1-of-1 slds-medium-size--1-of-6 slds-p-around_medium">
+                        <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+                          
+                          <div class="slds-m-vertical_medium slds-text-heading_small">Offline E-KYC</div>
+                          <img src={oKYCLogo} width="40px" class="slds-m-vertical_medium"/>
+                        </div>
+                      </div> -->
+                      <div class="slds-col slds-size--6-of-6 slds-small-size--1-of-1 slds-medium-size--6-of-6 slds-p-around_medium slds-text-align_left slds-text-heading_small" >
+                        <div class="blue-contianer">  I hereby consent to voluntarily submit to Tata Capital Housing Finance Limited (“the Company”) at my own discretion, offline electronic Aadhaar xml as issued by the Unique Identification Authority of India (“UIDAI”) for the purpose of establishing my identity / address proof in line with the Directions / guidelines issued by the Regulatory and Statutory bodies from time to time. I further give my consent to the Company for verification of my Aadhaar to establish the genuineness in such manner as permitted by UIDAI or under any law from time to time. The consent and purpose of collecting Aadhaar has been explained to me. The Company has informed me that my Aadhaar submitted to the Company shall not be used for any other purpose other than as per the requirements of law.
+                        </div>
+                          <br/>
+                          <br/>
+                          <p class={stepContainerClass}>Steps to the download Aadhaar XML through new URL:</p>
+                          <div class="slds-text-align_left slds-p-left_medium">
+                            
+                              <br/>
+                            <ul class={listCls}>
+                              <li>Go to the Url: <a href="https://myaadhaar.uidai.gov.in/">https://myaadhaar.uidai.gov.in/</a></li>
+                              <li>Click on Login post that enter Aadhaar Number, Captcha and Input OTP received on registered mobile number</li>
+                              <li>Click on Offline eKYC</li>
+                              <li>Create Share Code and download XML</li>
+                            </ul>
+                          </div>
+
+                          <div class="slds-m-vertical_medium">
+                              <lightning-input 
+                                 class={inputCls}
+                                  type="checkbox" label="I hereby declare that all the details furnished in the application form received by me through email have been voluntarily furnished by me and are true, correct and up-to-date in all respects. I also agree to having read & understood the “terms and conditions” and confirm to the “declarations”, forming part of the application form." 
+                                  name="input1" 
+                                  onchange={handleConfirmChange}
+                                  value={isConsent}></lightning-input>
+                          </div>
+                          <div class="slds-m-vertical_medium slds-text-align_center">                  
+                              <lightning-button 
+                                  variant="brand"
+                                  label="CONTINUE"
+                                  title="Continue"
+                                  onclick={confirmOkycInit}
+                                  class="slds-m-left_small btn-container"
+                                  disabled={disableButton}></lightning-button>
+                          </div>
+                          <!-- <form action={formUrl} method='POST' onsubmit={handleSubmit}>
+                            <input type='hidden' name='WEBAPI_REQUEST_DATA' value={formWebRequest} label="formRquestData"></input>
+                          </form> -->
+                      </div>
+                    </div> 
+                  </template>
+                  <template if:true={isInitOkycComplete}>
+                    <form action={formUrl} method='POST' onsubmit={handleSubmit}>
+                      <input type='hidden' name='WEBAPI_REQUEST_DATA' value={formWebRequest} label="formRquestData"></input>
+                      <div class="slds-text-align_left slds-p-around_medium slds-text-align_center">
+                        By clicking Submit, you will be redirected to a portal. Please upload the XML file there to start your OKYC process
+                        <br/>
+                      </div>
+                      <div class="slds-m-vertical_medium slds-text-align_center">                  
+                        <lightning-button 
+                            variant="brand"
+                            type="submit"
+                            label="SUBMIT"
+                            title="Submit"
+                            onclick={proceedToKyc}
+                            class="slds-m-left_small btn-container"
+                            disabled={disableButton}>
+                        </lightning-button>
+                      </div>
+                    </form>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div> 
+    </template>
+
+</template>
